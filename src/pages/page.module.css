@@ -1,0 +1,12 @@
+@media (min-width: 320px) {
+  .customContainer {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .customContainer {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
