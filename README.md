@@ -2,6 +2,7 @@
 
 2.Go to root directory and run the below command:
 
+
 To run tests, run the following command:
 
 Using yarn:
