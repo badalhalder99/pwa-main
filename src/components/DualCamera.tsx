@@ -26,6 +26,7 @@ const DualCamera = ({ showToast }: DualCameraProps) => {
       showToast("Back camera activated");
     } catch (error) {
       showToast("Unable to access camera. Please check permissions.");
+      console.log(error)
     }
   };
 

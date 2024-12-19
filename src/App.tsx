@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/index";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
+import { ARMeasure } from './components/ARMeasure';
 import "./App.css";
 
 interface Toast {
@@ -13,6 +14,7 @@ interface Toast {
 const App = () => {
   const [toasts, setToasts] = useState<Toast[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
 
   const showToast = (message: string): void => {
@@ -90,7 +92,8 @@ const App = () => {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index showToast={showToast} />} />
+          <Route path="/ar" element={<Index showToast={showToast} />} />
+          <Route path="/" element={<ARMeasure />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -98,3 +101,4 @@ const App = () => {
 };
 
 export default App;
+
